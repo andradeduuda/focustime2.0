@@ -1,0 +1,220 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color: hsla(240, 6%, 21%, 1);
+
+    --btn-c-primary: hsla(240, 6%, 21%, 1);
+    --btn-c-selected: hsla(0, 0%, 100%, 1);
+    --btn-bg-primary: hsla(240, 9%, 89%, 1);
+    --btn-bg-selected: hsla(194, 97%, 31%, 1);
+
+    --bg-primary: hsla(0, 0%, 100%, 1);
+
+    /* Font */
+    --ff-primary: 'Roboto', sans-serif;
+
+    font-size: 62.5%;
+  
+}
+
+body{
+  font-family: var(--ff-primary);
+  font-size: clamp(10.6rem, 4rem + 10vh, 8.8rem);
+  
+  background-color: var(--ff-primary);
+  height: 100vh;
+  display: grid;
+}
+
+/* #darkTheme img {
+  position: fixed;
+  right: 6.4rem;
+  top: 6.4rem;
+  width: 4.4rem;
+  cursor: pointer;
+} */
+
+.page {
+    text-align: center;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* header {
+ position: fixed;
+  top: clamp(4rem, 4.7vw, 6rem);
+  right: clamp(4rem, 4.7vw, 6rem);
+
+}
+header button {
+  margin: 6.4rem 6.4rem 0;
+} 
+
+header button svg {
+  width: clamp(2.7rem, 3.1vw, 4rem);
+  height: auto;
+} */
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+.timer{
+    display: flex; 
+    color: var(--text-color);
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #E1E1E6;
+}
+
+.hide{
+  display: none;
+}
+
+fieldset{
+  display: flex;
+  border: none;
+  margin-left: clamp(12rem, 1rem + 8vh, 19.4rem );
+}
+
+.cards svg{
+  fill: #323238;
+}
+
+.cards .forest,
+.cards .coffe,
+.cards .fireplace,
+.cards .rain{
+  background-color: #E1E1E6;
+  border-radius: 2.4rem;
+
+  height: 16rem;
+  width: 15rem;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* ALINHAMENTO BOTÕES*/
+   .cards { 
+    display: grid;
+    gap:3.2rem;
+
+    grid-template-areas: "A B" "C D" ;
+}
+
+/*IMPUT RANGE*/
+button .range  {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 9rem;
+  height: 0.4rem;
+  left: 77rem;
+  border-radius: .5rem;
+
+  background-color: var(--btn-c-primary); 
+  cursor: pointer;
+}
+
+button .range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--btn-c-primary);
+}
+
+/*colors click*/
+.forest.blue, 
+.rain.blue, 
+.coffe.blue, 
+.fireplace.blue {
+  background-color: var(--btn-bg-selected);
+  fill: var(--btn-c-selected);
+}
+
+.forest.blue svg, 
+.rain.blue svg, 
+.coffe.blue svg, 
+.fireplace.blue svg{
+  fill:var(--btn-c-selected);
+}
+
+.forest.blue input, 
+.rain.blue input, 
+.coffe.blue input, 
+.fireplace.blue input {
+  background-color:var(--btn-c-selected);
+}
+ 
+.forest.blue  .range::-webkit-slider-thumb,
+.rain.blue  .range::-webkit-slider-thumb,
+.coffe.blue .range::-webkit-slider-thumb,
+.fireplace.blue .range::-webkit-slider-thumb {
+  background-color: var(--btn-c-selected);
+}
+
+.dark-mode-switch {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+.dark-mode-switch button {
+  background: transparent;
+}
+
+/*DARK MODE*/
+ /* :root.dark-mode {
+  --tt-primary: hsla(0, 0%, 100%, 1);
+
+  --btn-c-primary: hsla(240, 7%, 78%, 1);
+  --btn-c-selected: hsla(0, 0%, 100%, 1);
+
+  --btn-bg-primary: hsl(240, 6%, 17%);
+  --btn-bg-selected: hsl(196, 74%, 15%);
+
+  --bg-primary: hsla(240, 5%, 7%, 1);
+}  */
+
+body.dark{
+  background-color: #121214;
+}
+
+.forest .dark-mode, 
+.rain .dark-mode, 
+.coffe .dark-mode, 
+.fireplace .dark-mode{
+  fill: #f01717;
+} 
+
+.timer.dark {
+
+  color:  #FFFFFF;
+}
+
+
+
+
+.cards.dark svg path{
+  fill: #ffffff;
+  
+}
+
