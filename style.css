@@ -48,21 +48,6 @@ body{
     justify-content: space-evenly;
 }
 
-/* header {
- position: fixed;
-  top: clamp(4rem, 4.7vw, 6rem);
-  right: clamp(4rem, 4.7vw, 6rem);
-
-}
-header button {
-  margin: 6.4rem 6.4rem 0;
-} 
-
-header button svg {
-  width: clamp(2.7rem, 3.1vw, 4rem);
-  height: auto;
-} */
-
 main{
   display: flex;
   flex-direction: column;
@@ -111,7 +96,6 @@ fieldset{
   align-items: center;
 }
 
-/* ALINHAMENTO BOTÕES*/
    .cards { 
     display: grid;
     gap:3.2rem;
@@ -119,7 +103,6 @@ fieldset{
     grid-template-areas: "A B" "C D" ;
 }
 
-/*IMPUT RANGE*/
 button .range  {
   -webkit-appearance: none;
   appearance: none;
@@ -181,40 +164,26 @@ button .range::-webkit-slider-thumb{
   background: transparent;
 }
 
-/*DARK MODE*/
- /* :root.dark-mode {
-  --tt-primary: hsla(0, 0%, 100%, 1);
+.dark-mode-switch {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
 
-  --btn-c-primary: hsla(240, 7%, 78%, 1);
-  --btn-c-selected: hsla(0, 0%, 100%, 1);
+.dark-mode-switch button {
+  background: transparent;
+}
 
-  --btn-bg-primary: hsl(240, 6%, 17%);
-  --btn-bg-selected: hsl(196, 74%, 15%);
-
-  --bg-primary: hsla(240, 5%, 7%, 1);
-}  */
 
 body.dark{
   background-color: #121214;
 }
 
-.forest .dark-mode, 
-.rain .dark-mode, 
-.coffe .dark-mode, 
-.fireplace .dark-mode{
-  fill: #f01717;
-} 
-
-.timer.dark {
-
-  color:  #FFFFFF;
+#controls svg path .dark  {
+ fill: #9c9cf8;
+ background-color: #9c9cf8;
 }
 
-
-
-
-.cards.dark svg path{
-  fill: #ffffff;
-  
+.timer.dark{
+  color:  #ffffff;
 }
-
