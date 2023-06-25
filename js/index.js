@@ -164,47 +164,33 @@ volFireplace.addEventListener ('input', function () {
 const buttonLight = document.querySelector ('.light')
 const buttonDark = document.querySelector ('.dark')
 
-
 buttonLight.addEventListener('click', function() {
   btnLight()
-  
   })
  
 buttonDark.addEventListener('click', function() {
-  
   btnDark()
-  
   })
   
   function btnDark() {
     buttonLight.classList.remove('hide')
     buttonDark.classList.add('hide')
-    
    }
   
    function btnLight() {
-  
     buttonLight.classList.add('hide')
-    buttonDark.classList.remove('hide')
-    
+    buttonDark.classList.remove('hide') 
    }
 
-   buttonLight.addEventListener('click', function () {
+buttonLight.addEventListener('click', function () {
 
     document.body.classList.toggle('dark');
-    
-    buttonFireplace.classList.toggle('dark')
-    buttonCoffe.classList.toggle('dark')
-    buttonForest.classList.toggle('dark')
-    buttonRain.classList.toggle ('dark') 
-  
+    timer.classList.toggle('dark')
+    controls.classList.toggle('dark')   
   })
   
   buttonDark.addEventListener('click', function (){
     document.body.classList.toggle('dark');
-  
-    buttonFireplace.classList.toggle('dark')
-    buttonCoffe.classList.toggle('dark')
-    buttonForest.classList.toggle('dark')
-    buttonRain.classList.toggle ('dark')
+    timer.classList.toggle('dark')
+    controls.classList.toggle('dark')   
   })
